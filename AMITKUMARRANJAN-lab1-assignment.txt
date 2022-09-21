@@ -1,0 +1,355 @@
+Q 1 Java program to print welcome message.
+
+
+package assignment1;
+
+public class Welcome {
+
+	public static void main(String[] args) {
+		System.out.println("Welcome");
+
+	}
+
+}
+
+OUTPUT-
+Welcome
+
+------------------------------------------------------------
+Q 2 Java program to print sum of  three float numbers
+
+package assignment1;
+
+import java.util.Scanner;
+
+public class Sum_of_3floatno {
+
+	public static void main(String[] args) {
+		float a,b,c;
+	     Scanner s =new Scanner(System.in);
+	     System.out.println("sum of three float number");
+	     
+	     System.out.print("enter ist number = ");
+	     a = s.nextFloat();
+	     
+	     System.out.print("enter 2nd number = ");
+	     b = s.nextFloat();
+	     
+	     System.out.print("enter 3rd number = ");
+		 c = s.nextFloat();
+		 System.out.println("sum is " +(a+b+c));
+	}
+
+}
+OUTPUT-
+sum of three float number
+enter ist number = 23
+enter 2nd number = 45
+enter 3rd number = 23.3
+sum is 91.3
+
+-------------------------------------------------------------------------------------------------------------
+Q 3 Java Program to Swap Two Numbers
+
+package assignment1;
+
+import java.util.Scanner;
+
+public class Swap_two_no {
+
+	public static void main(String[] args) {
+		 int a,b,c;
+		 System.out.println("enter 2 number for swap");
+		 Scanner s = new Scanner(System.in);
+		 
+		 System.out.print("enter value of a = ");
+         a = s.nextInt();
+		 
+		 System.out.print("enter value of b = ");
+         b = s.nextInt();
+         
+		  System.out.println("Before swaping a = " +a +" and "+ "b = " +b);
+		 
+		 c=a;
+		 a=b;
+		 b=c;
+		 
+		 System.out.println("After swaping a = " +a +" and b = " +b );
+	}
+
+}
+
+OUTPUT-
+enter 2 number for swap
+enter value of a = 11
+enter value of b = 23
+Before swaping a = 11 and b = 23
+After swaping a = 23 and b = 11
+----------------------------------------------------------------------------------------------------------------------------
+Q 4 Wap to check if number is even or odd
+
+package assignment1;
+
+import java.util.Scanner;
+
+public class Odd_or_even {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		System.out.print("Enter number = ");
+		Scanner s = new Scanner(System.in);
+	  int a = s.nextInt();
+		
+	  if(a%2== 0) {
+			System.out.print("number is even");
+		}
+		else
+			System.out.print("number is odd");
+	}
+
+}
+OUTPUT-
+
+Enter number = 23
+number is odd
+--------------------------------------------------------------------------------------------------------------------------------
+Q 5 wap to check from three given number  that whether a number is greater than or equal to 20 and less than other numbers .print appropriate message .
+
+package assignment1;
+
+import java.util.Scanner;
+
+public class Greater_or_equal {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		System.out.println("Enter 3 number");
+		Scanner s = new Scanner(System.in);
+		
+		System.out.print("enter 1st number = ");
+		int a = s.nextInt();
+		
+		System.out.print("enter 2nd number = ");
+		int b = s.nextInt();
+		
+		System.out.print("enter 3rd number = ");
+		int c = s.nextInt();
+		
+		System.out.println("a = " +a +",b = " +b + ", c = " +c);
+		
+		if(a>20 && (a<b && a<c)) {
+			System.out.println("Condition is true because a is greater then 20 and less then b and c");
+		}
+		else
+			System.out.print("Condition is false");
+	}
+
+}
+OUTPUT-
+Enter 3 number
+enter 1st number = 23
+enter 2nd number = 45
+enter 3rd number = 21
+a = 23,b = 45, c = 21
+Condition is false
+------------------------------------------------------------------------------------------------------------------------------------
+Q 7 wap to check if sales of a person is greater than 10000 then eligible for bonus 
+else not eligible calculate bonus as 20% of sales .
+
+package assignment1;
+
+import java.util.Scanner;
+
+public class Bonus {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter sales value");
+		int sales=s.nextInt();
+		
+		if(sales>10000) {
+			System.out.println("Congratulation eligible for Bonus");
+		float temp=(float)(sales*20)/100;
+		System.out.println("Bonus value is = "+temp);
+		}
+		
+		else
+			System.out.println("Sorry not eligible for Bonus");
+	}
+
+}
+OUTPUT-
+Enter sales value
+12000
+Congratulation eligible for Bonus
+Bonus value is = 2400.0
+----------------------------------------------------------------------------------------------------------------------------------------
+Q 8 wap to check if two given integer value is in range of 18 and 100 print eligible for voting else NOT ELIGIBLE.
+
+package assignment1;
+
+import java.util.Scanner;
+
+public class Eligible_for_voting {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter your Age, check for eligible for Vote");
+		int voteV=s.nextInt();
+		if(voteV>=18 && voteV<=100)
+			System.out.println("You are eligible for Vote");
+		else
+			System.out.println("not eligible for Vote");
+	}
+
+}
+OUTPUT-
+Enter your Age, check for eligible for Vote
+25
+You are eligible for Vote
+----------------------------------------------------------------------------------------------------------------------------------------------
+Q 9 wap to print average of  given five subjects marks of student and check if average >=40 print Pass else print fail
+
+package assignment1;
+
+import java.util.Scanner;
+
+public class Pass_or_fail {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner s=new Scanner(System.in);
+		System.out.print("Enter Hindi subject mark");
+		int hindi=s.nextInt();
+		System.out.print("Enter English subject mark");
+		int english=s.nextInt();
+		System.out.print("Enter Physics subject mark");
+		int physics=s.nextInt();
+		System.out.print("Enter Chemistry subject mark");
+		int chemistry=s.nextInt();
+		System.out.print("Enter Math subject mark");
+		int math=s.nextInt();
+		float avg=(float)(hindi+english+physics+chemistry+math)/5;
+		if(avg>=40)
+			System.out.println("Pass");
+		else
+			System.out.println("Fail");
+	}
+
+}
+OUTPUT-
+Enter Hindi subject mark45
+Enter English subject mark32
+Enter Physics subject mark65
+Enter Chemistry subject mark76
+Enter Math subject mark65
+Pass
+--------------------------------------------------------------------------------------------------------------------------------------
+Q10 WAP to ask name ,age and salary of an employee and print on console.
+ 
+package assignment1;
+
+import java.util.Scanner;
+
+public class Name_age_salary {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter your name");
+		String name=s.nextLine();
+		System.out.println("Enter your age");
+		int age=s.nextInt();
+		System.out.println("Enter your salary");
+		float salary=s.nextFloat();
+		System.out.println("Employee details\n"+name+"\n"+age+"\n"+salary);
+	}
+
+}
+OUTPUT-
+Enter your name
+AMIT
+Enter your age
+25
+Enter your salary
+21000
+Employee details
+AMIT
+25
+21000.0
+-----------------------------------------------------------------------------------------------------------------------------------
+Q 11 wap  that ask two numbers from user and print greater number among two 
+ 
+package assignment1;
+
+import java.util.Scanner;
+
+public class User_input_greater {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner s=new Scanner(System.in);
+		 System.out.println("Enter two no to check which is greater");
+		 int fist=s.nextInt();
+		 int second=s.nextInt();
+		 if(fist>second)
+			 System.out.println(fist+" is greatest value");
+		 else
+			 System.out.println(second+" is greatest value");
+	}
+
+}
+
+OUTPUT-
+
+Enter two no to check which is greater
+23
+24
+24 is greatest value
+-----------------------------------------------------------------------------------------------------------------------------------
+Q 12  wap to ask product name and price of product from user and calculate discount i.e 
+if price > 2000 then discount is 10 percent of price 
+else discount is 7 % of price
+
+package assignment1;
+
+import java.util.Scanner;
+
+public class Discount {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter product name and price to calculate discount");
+		String name=s.nextLine();
+		int price=s.nextInt();
+		if(price>2000) {
+			float temp;
+			temp=price;
+			temp=(temp*10)/100;
+			float temp1=price;
+			temp1=temp1-temp;
+			System.out.println("Product "+name+" ,10% discounted price of product "+temp1);
+		}
+		else if(price <=2000) {
+			float temp;
+			temp=price;
+			temp=(temp*7)/100;
+			float temp1=price;
+			temp1=temp1-temp;
+			System.out.println("Product "+name+" ,7% discounted price of product "+temp1);
+		}
+	}
+}
+
+
+OUTPUT-
+Enter product name and price to calculate discount
+CAR
+5000
+Product CAR ,10% discounted price of product 4500.0
+------------------------------------------------------------------------------------------------------------------------------------------
