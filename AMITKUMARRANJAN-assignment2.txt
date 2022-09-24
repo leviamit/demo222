@@ -1,0 +1,438 @@
+package assignment2;
+//1.     Write a program to find sum
+//of all integers greater than 100 and less than 200 that are divisible by 7.
+
+
+
+public class A_Sum_of_integers {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		 int sum=0; 
+
+		 for(int i=100;i<200;i++) 
+
+		    { 
+
+		    if(i%7==0) 
+
+		    { 
+
+		    sum=sum+i; 
+
+		    } 
+
+		     
+
+		    } 
+
+		 System.out.println("sum of all integers from 100 to 200 divisible by 7 is = "+sum);
+		  
+	}
+
+}
+OUTPUT-
+sum of all integers from 100 to 200 divisible by 7 is = 2107
+----------------------------------------------------------------------------------------------------------------------
+package assignment2;
+
+//2 Write a program in java that ask three numbers from
+//user and print the greatest among three .
+import java.util.Scanner;
+
+public class B_ask_from_user {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner s = new Scanner(System.in); 
+
+		 
+
+        System.out.print("Enter three number: "); 
+
+        int a = s.nextInt(); 
+
+        int b = s.nextInt(); 
+
+        int c = s.nextInt(); 
+
+        if(a>=b&&a>=c) 
+
+        { 
+
+        	System.out.println("the greatest no is"+a); 
+
+        	 
+
+        } 
+
+        else if(b>=a&&b>=c) 
+
+        { 
+
+        	System.out.println("the greatest no is"+b); 
+
+        } 
+
+        else 
+
+        	System.out.println("is the greatest no is = "+c); 
+
+ 
+	}
+
+}
+OUTPUT-
+Enter three number: 123
+432
+125
+the greatest no is432
+-------------------------------------------------------------------------------------------------------------------
+
+package assignment2;
+//3. WAP to find  ASCII value of a character .
+
+import java.util.Scanner;
+
+public class C_ASCII {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+char ch ;     
+
+        Scanner s = new Scanner(System.in); 
+
+        System.out.print("Enter a character: "); 
+
+        ch = s.next().charAt(0); 
+
+        int ascii=ch; 
+
+         
+
+        int castAscii = (int) ch; 
+
+ 
+
+        System.out.println("The ASCII value of " + ch + " is: " + ascii); 
+
+         
+
+ 
+	}
+
+}
+OUTPUT-
+Enter a character: a
+The ASCII value of a is: 97
+---------------------------------------------------------------------------------------------------------------------------
+
+package assignment2;
+
+import java.util.Scanner;
+
+//4. Java Program to Check Whether an Alphabet is Vowel or Consonant
+
+
+public class D_vowel_or_consonant {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner s = new Scanner(System.in); 
+
+        
+
+        System.out.print("Enter the character: "); 
+
+        char ch  = s.next().charAt(0); 
+
+        if(ch=='a' ||  ch=='e' || ch=='i' || ch=='o'|| ch=='u') 
+
+        	System.out.println(ch+" is vowel"); 
+
+        else 
+
+        	System.out.println(ch+" is constant"); 
+
+        	
+	}
+
+}
+OUTPUT-
+Enter the character: i
+i is vowel
+----------------------------------------------------------------------------------------------------------------------------
+
+package assignment2;
+//5 Check if a Number is Positive or Negative using if else
+
+
+import java.util.Scanner;
+
+public class E_ifelse_positivenegative {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner s = new Scanner(System.in); 
+
+		 
+
+        System.out.print("Enter the number: "); 
+
+        int a = s.nextInt(); 
+
+        if(a>0) 
+
+        	System.out.println("number is positive"); 
+
+        else 
+
+        	System.out.println("number is negative"); 
+
+
+	}
+
+}
+OUTPUT-
+Enter the number: 3
+number is positive
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+package assignment2;
+
+import java.util.Scanner;
+
+//6 WAP for swapping two numbers without using third variable
+public class F_swapping {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner s = new Scanner(System.in); 
+
+		 
+
+        System.out.print("Enter two number: "); 
+
+        int a = s.nextInt(); 
+
+        int b = s.nextInt(); 
+
+        System.out.println("before swapping a="+a);  
+
+   	    System.out.println("before swapping b="+b); 
+
+   	    a=a+b; 
+
+   	    b=a-b; 
+
+   	    a=a-b; 
+
+   	 System.out.println("after swapping a"+a); 
+
+ System.out.println("after swapping b="+b);
+
+ 
+	}
+
+}
+OUTPUT-
+Enter two number: 22
+43
+before swapping a=22
+before swapping b=43
+after swapping a43
+after swapping b=22
+---------------------------------------------------------------------------------------------------------------------------------
+
+package assignment2;
+//7 Write a program that would print the information (name,
+//year of joining, salary, address) of three employees by creating a class named
+//'Employee'.
+
+
+
+import java.util.Scanner;
+
+public class G_employee_details {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String name1,name2,name3;
+		 int    yoj1,yoj2,yoj3;
+		 String add1,add2,add3;
+		 Scanner s= new Scanner(System.in);
+ System.out.println("enter first employee data");
+ name1= s.next();
+ yoj1= s.nextInt();
+ add1=s.nextLine();
+ 
+ Scanner s1= new Scanner(System.in);
+ System.out.println("enter second employee data");
+ name2= s1.next();
+ yoj2=  s1.nextInt();
+ add2=  s1.next();
+ 
+  
+ System.out.println("enter third employee data");
+ name3= s.next();
+ yoj3= s.nextInt();
+ add3=s.next();
+ 
+ System.out.println(name1+ "  "+ yoj1+" "+ add1);
+ System.out.println(name2+ "  "+ yoj2+" "+ add2);
+ System.out.println(name3+ "  "+ yoj3+" "+ add3);
+
+	}
+
+}
+
+OUTPUT-
+enter first employee data
+AMIT
+2022
+enter second employee data
+ABHISHEK
+2021
+MUMBAI
+enter third employee data
+RAVI
+2020
+CHENNAI
+AMIT  2022 
+ABHISHEK  2021 MUMBAI
+RAVI  2020 CHENNAI
+-----------------------------------------------------------------------------------------------------------------------------------package assignment2;
+
+//8 WAP to input basic salary of an employee and calculate its
+//Gross salary according to following:
+
+
+import java.util.Scanner;
+
+public class H_basic_salary {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner in=new Scanner(System.in);
+		System.out.println("Enter Salary of employee");
+		double salary=in.nextFloat();
+
+		if(salary<=10000)
+		{
+	
+		double gross;
+		gross= salary+(0.20+0.80*salary);
+		System.out.println("The gross salary of employee is "+gross);
+	
+	
+		}
+		else if(salary<=20000)
+		{
+		double gross;
+		gross=salary+(0.25+0.90*salary);
+		System.out.println("The gross salary of employee is "+gross);
+	
+		}
+		else if(salary>20000)
+		{
+		double gross;
+		gross=salary+(0.30+0.95*salary);
+		System.out.println("The gross salary of employee is"+gross);
+		}
+	}
+
+}
+OUTPUT-
+Enter Salary of employee
+19000
+The gross salary of employee is 36100.25
+----------------------------------------------------------------------------------------------------------------------------------------------------
+package assignment2;
+//Q  8 Q  wap to print even numbers between 10 to 20
+
+
+public class I_print_evenno {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int i;
+		for(i=10;i<=20;i++)
+		{
+		if(i%2==0)
+		{
+		System.out.println("The even numbers are"+i);
+		}
+		}
+
+
+	}
+
+}
+OUTPUT-
+The even numbers are12
+The even numbers are14
+The even numbers are16
+The even numbers are18
+The even numbers are20
+---------------------------------------------------------------------------------------------------------------------------------------------------
+package assignment2;
+
+import java.util.Scanner;
+
+//Q  9 wap to check if a number is prime or not
+
+
+
+public class J_prime_or_not {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner in=new Scanner(System.in);
+		System.out.println("Enter the number");
+		int num=in.nextInt();
+		int i;
+		for(i=2;i<=num/2;i++)
+		{
+		if(num%i==0)
+		{
+		System.out.println("The number is not prime");
+		break;
+		}
+		System.out.println("The number is prime");
+		}
+		}
+	}
+OUTPUT-
+Enter the number
+24
+The number is not prime
+-------------------------------------------------------------------------------------------------------------------------------------------------
+package assignment2;
+
+import java.util.Scanner;
+
+//Q 10 wap to reverse a given digit   123   321
+
+
+public class K_reverse_digit {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner in=new Scanner(System.in);
+		System.out.println("Enter three digit number");
+		int num=in.nextInt();
+		int a=num%10;
+		num=num/10;
+		int b=num%10;
+		int c=num/10;
+		int rev=(a*100)+(b*10)+c;
+		System.out.println("The reverse of given number is"+a+b+c);
+
+	}
+
+}
+OUTPUT-
+Enter three digit number
+123
+The reverse of given number is321
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
